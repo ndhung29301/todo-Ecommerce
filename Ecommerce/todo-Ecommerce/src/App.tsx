@@ -3,13 +3,18 @@ import './App.css';
 import {useRoutes} from "react-router-dom";
 import {Home} from "./pages/home";
 
+
+
+
 function App() {
 
   return useRoutes([
     {
       path: "/home",
+      index:true,
       element: <Home/>
     },
+
   ])
 }
 
