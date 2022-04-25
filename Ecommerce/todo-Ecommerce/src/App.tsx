@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import {useRoutes} from "react-router-dom";
-import {Home} from "./pages/home";
+import HomePage from "./pages/home";
+
 
 
 
@@ -12,7 +13,11 @@ function App() {
     {
       path: "/home",
       index:true,
-      element: <Home/>
+      element: <HomePage/>
+    },
+    {
+      path: "*",
+      element: <div>404</div>
     },
 
   ])

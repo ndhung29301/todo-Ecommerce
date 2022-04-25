@@ -2,10 +2,9 @@ import React from "react";
 import {Box, Button, Flex, Link, Text} from "../../atoms/custom_basic";
 import { MdSearch } from "react-icons/md";
 import styled from "styled-components";
+interface IHeader {
 
-
-
-
+}
 const Categories=styled(Link)`
   &:hover {
     text-decoration-line: underline;
@@ -13,13 +12,15 @@ const Categories=styled(Link)`
 `
 const Container=styled(Box)`
   &:hover {
-    background-color: transparent;
-  }
+    background-color: #FFFFFF;
+  };
+  position: absolute;
+  top: 0;
+  z-index: 100;
 `
-
-export  const  Header :React.VFC=():JSX.Element =>{
+export  const  Header :React.FC<IHeader>=(props):JSX.Element =>{
     return (
-    <Container width={"100%"} backgroundColor={"pink"} paddingBottom={'20px'}>
+    <Container width={"100%"} backgroundColor={"transparent"} paddingBottom={'20px'}>
     <Flex justifyContent={"space-between"} padding={"30px 50px 20px 50px"} alignItems={"center"}>
            <Button flexDirection={"row"} border={"none"} color={"none"} backgroundColor={"transparent"} alignItems={"center"} >
                <MdSearch fontSize={"24px"}/>
@@ -56,10 +57,6 @@ export  const  Header :React.VFC=():JSX.Element =>{
                 </Categories>
             </Flex>
         </Flex>
-        {/*<Box  padding={"0 20px 0 20px"}>*/}
-        {/*    <Flex border={'1px solid #307df1'}/>*/}
-        {/*</Box>*/}
-
     </Container>
 
 
